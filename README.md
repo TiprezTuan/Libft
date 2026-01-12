@@ -1,112 +1,161 @@
-📑 Libft - @42Paris
+# libft
 
-<p align="center"> <img src="https://img.shields.io/badge/Score-125%2F100-success?style=for-the-badge&logo=42" alt="Score 125/100"> <img src="https://img.shields.io/badge/Language-C-blue?style=for-the-badge&logo=c" alt="Language C"> <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Completed"> </p>
-📝 Présentation
+Ma première bibliothèque en C - Projet de l'école 42 Paris
 
-La Libft est le premier projet du cursus de 42. L'objectif est de recoder un ensemble de fonctions de la bibliothèque C standard (libc) ainsi que d'autres fonctions utilitaires que nous pourrons réutiliser tout au long de notre cursus.
+## 📋 Description
 
-    "Ce projet vous apprend à comprendre en profondeur les fonctions de manipulation de mémoire et de chaînes de caractères en C."
+**libft** est le premier projet du cursus de 42. L'objectif est de recoder certaines fonctions de la bibliothèque standard du C (`libc`), ainsi que d'autres fonctions utilitaires qui serviront tout au long du cursus.
 
-🛠️ Sommaire
+Ce projet permet de mieux comprendre le fonctionnement de ces fonctions standard et d'acquérir une base solide en programmation C.
 
-    Partie 1 : Fonctions de la Libc
+## 🎯 Objectifs pédagogiques
 
-    Partie 2 : Fonctions supplémentaires
+- Comprendre le fonctionnement interne des fonctions de la `libc`
+- Manipuler les pointeurs, la mémoire et les chaînes de caractères
+- Respecter la Norme de 42
+- Créer une bibliothèque réutilisable pour les futurs projets
 
-    Partie Bonus : Manipulation de listes
+## 📚 Fonctions implémentées
 
-    Installation & Utilisation
+### Partie 1 : Fonctions de la libc
 
-📂 Contenu du projet
-Partie 1 : Fonctions de la Libc
+#### Manipulation de caractères
+- `ft_isalpha` - Vérifie si le caractère est alphabétique
+- `ft_isdigit` - Vérifie si le caractère est un chiffre
+- `ft_isalnum` - Vérifie si le caractère est alphanumérique
+- `ft_isascii` - Vérifie si le caractère est ASCII
+- `ft_isprint` - Vérifie si le caractère est imprimable
+- `ft_toupper` - Convertit en majuscule
+- `ft_tolower` - Convertit en minuscule
 
-Ces fonctions imitent le comportement des fonctions standards originales.
-Caractères	Mémoire	Chaînes	Conversion
-ft_isalpha	ft_memset	ft_strlen	ft_atoi
-ft_isdigit	ft_bzero	ft_strlcpy	ft_toupper
-ft_isalnum	ft_memcpy	ft_strlcat	ft_tolower
-ft_isascii	ft_memmove	ft_strchr	
-ft_isprint	ft_memchr	ft_strrchr	
-	ft_memcmp	ft_strncmp	
-	ft_calloc	ft_strnstr	
-		ft_strdup	
-Partie 2 : Fonctions supplémentaires
+#### Manipulation de chaînes
+- `ft_strlen` - Calcule la longueur d'une chaîne
+- `ft_strchr` - Recherche un caractère dans une chaîne
+- `ft_strrchr` - Recherche un caractère depuis la fin
+- `ft_strncmp` - Compare deux chaînes (n caractères)
+- `ft_strnstr` - Recherche une sous-chaîne
+- `ft_strlcpy` - Copie une chaîne de manière sécurisée
+- `ft_strlcat` - Concatène une chaîne de manière sécurisée
 
-Fonctions utilitaires ne faisant pas partie de la libc ou présentes sous une forme différente.
+#### Gestion de la mémoire
+- `ft_memset` - Remplit la mémoire avec une valeur
+- `ft_bzero` - Met à zéro une zone mémoire
+- `ft_memcpy` - Copie une zone mémoire
+- `ft_memmove` - Copie une zone mémoire (avec chevauchement)
+- `ft_memchr` - Recherche un caractère en mémoire
+- `ft_memcmp` - Compare deux zones mémoires
 
-    ft_substr : Extrait une sous-chaîne.
+#### Conversion et allocation
+- `ft_atoi` - Convertit une chaîne en entier
+- `ft_calloc` - Alloue et initialise la mémoire
+- `ft_strdup` - Duplique une chaîne
 
-    ft_strjoin : Concatène deux chaînes dans une nouvelle zone mémoire.
+### Partie 2 : Fonctions supplémentaires
 
-    ft_strtrim : Supprime des caractères spécifiques au début et à la fin.
+- `ft_substr` - Extrait une sous-chaîne
+- `ft_strjoin` - Concatène deux chaînes
+- `ft_strtrim` - Supprime les caractères spécifiés aux extrémités
+- `ft_split` - Découpe une chaîne selon un délimiteur
+- `ft_itoa` - Convertit un entier en chaîne
+- `ft_strmapi` - Applique une fonction à chaque caractère
+- `ft_striteri` - Applique une fonction à chaque caractère (avec index)
+- `ft_putchar_fd` - Écrit un caractère sur un fd
+- `ft_putstr_fd` - Écrit une chaîne sur un fd
+- `ft_putendl_fd` - Écrit une chaîne suivie d'un retour à la ligne
+- `ft_putnbr_fd` - Écrit un nombre sur un fd
 
-    ft_split : Découpe une chaîne en tableau de chaînes selon un délimiteur.
+### Bonus : Manipulation de listes chaînées
 
-    ft_itoa : Convertit un entier en chaîne de caractères.
+- `ft_lstnew` - Crée un nouvel élément
+- `ft_lstadd_front` - Ajoute un élément au début
+- `ft_lstsize` - Compte le nombre d'éléments
+- `ft_lstlast` - Retourne le dernier élément
+- `ft_lstadd_back` - Ajoute un élément à la fin
+- `ft_lstdelone` - Supprime un élément
+- `ft_lstclear` - Supprime toute la liste
+- `ft_lstiter` - Applique une fonction à chaque élément
+- `ft_lstmap` - Applique une fonction et crée une nouvelle liste
 
-    ft_strmapi / ft_striteri : Applique une fonction sur chaque caractère.
+## 🛠️ Compilation et utilisation
 
-    ft_putchar_fd / ft_putstr_fd / ft_putendl_fd / ft_putnbr_fd : Écrit sur un descripteur de fichier.
+### Compilation
 
-Partie Bonus (Listes chaînées)
-
-Structure utilisée :
-C
-
-typedef struct s_list
-{
-    void            *content;
-    struct s_list   *next;
-} t_list;
-
-Fonctions : ft_lstnew, ft_lstadd_front, ft_lstsize, ft_lstlast, ft_lstadd_back, ft_lstdelone, ft_lstclear, ft_lstiter, ft_lstmap.
-🚀 Installation & Utilisation
-Compilation
-
-Le projet utilise un Makefile qui compile une bibliothèque statique libft.a.
-Bash
-
-# Compiler les fonctions de base
+```bash
+# Compiler la bibliothèque
 make
 
-# Compiler avec les bonus (listes chaînées)
+# Compiler avec les bonus
 make bonus
 
-# Nettoyer les fichiers objets (.o)
+# Nettoyer les fichiers objets
 make clean
 
-# Nettoyer tout (objets + .a)
+# Nettoyer tous les fichiers générés
 make fclean
 
-# Recompiler à zéro
+# Recompiler complètement
 make re
+```
 
-Utilisation dans votre projet
+### Utilisation dans un projet
 
-Pour utiliser cette bibliothèque dans ton code, inclus le header et compile avec le fichier .a :
-
-    Ajoute le header dans ton fichier .c :
-    C
-
+```c
 #include "libft.h"
 
-Compile ton projet avec la bibliothèque :
-Bash
+int main(void)
+{
+    char *str = ft_strdup("Hello, 42!");
+    ft_putendl_fd(str, 1);
+    free(str);
+    return (0);
+}
+```
 
-    cc -Wall -Wextra -Werror main.c -L. -lft
+**Compilation avec libft :**
+```bash
+gcc -Wall -Wextra -Werror main.c -L. -lft -o program
+```
 
-🧪 Tests
+## 📁 Structure du projet
 
-Bien que ce dépôt ne contienne pas de testeur, le projet a été validé avec :
+```
+libft/
+├── Makefile
+├── libft.h
+├── ft_*.c          (fichiers sources)
+└── README.md
+```
 
-    Libft-unit-test
+## ⚙️ Makefile
 
-    libft-war-machine
+Le Makefile contient les règles suivantes :
+- `all` : Compile la bibliothèque
+- `clean` : Supprime les fichiers objets
+- `fclean` : Supprime les fichiers objets et la bibliothèque
+- `re` : Recompile entièrement
+- `bonus` : Compile avec les fonctions bonus
 
-    libftTester
+## ✅ Normes et contraintes
 
-👤 Auteur
+- Respect strict de la Norme de 42
+- Aucune variable globale autorisée
+- Utilisation de `Makefile` pour la compilation
+- Gestion de la mémoire sans fuites (`valgrind`)
+- Flags de compilation : `-Wall -Wextra -Werror`
 
-    ttiprez - [Github](https://github.com/TiprezTuan)
+## 🧪 Tests
 
-Projet réalisé dans le cadre du tronc commun de l'école 42 Paris.
+Pour tester votre libft, vous pouvez utiliser :
+- [francinette](https://github.com/xicodomingues/francinette)
+
+## 📝 Notes
+
+Ce projet est réalisé dans le cadre du cursus de 42 Paris. Il constitue la base pour de nombreux projets futurs et sera réutilisé tout au long du tronc commun.
+
+## 👤 Auteur
+
+Projet réalisé par ttiprez à 42 Paris
+
+## 📜 Licence
+
+Ce projet est réalisé à des fins éducatives dans le cadre du cursus de l'école 42.
