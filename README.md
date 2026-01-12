@@ -107,6 +107,6 @@ Bien que ce dépôt ne contienne pas de testeur, le projet a été validé avec 
 
 👤 Auteur
 
-    Ton Nom / Login - Ton profil GitHub
+    ttiprez - [Github](https://github.com/TiprezTuan)
 
 Projet réalisé dans le cadre du tronc commun de l'école 42 Paris.
